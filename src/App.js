@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import CustomBtn from "./components/ReusableButton";
 function App() {
   const [count, setCount] = useState(0);
   return (
@@ -13,10 +13,14 @@ function App() {
         </p>
         <h1>Counter: {count}</h1>
         <div className="btns">
-          <button onClick={() => setCount(count + 1)}>Increase Count</button>
-          <button onClick={() => count && setCount(count - 1)}>
-            Decrease Count
-          </button>
+          <CustomBtn
+            text={"Increase Count"}
+            onClick={() => setCount(count + 1)}
+          />
+          <CustomBtn
+            text={"Decrease Count"}
+            onClick={() => count && setCount(count - 1)}
+          />
         </div>
       </header>
     </div>
