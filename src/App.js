@@ -1,29 +1,22 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import CustomBtn from "./components/ReusableButton";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CustomNavbar from "./components/Navbar";
+import Home from "./Home";
+import Counter from "./components/counter";
+import Products from "./components/products";
+import ProductDetails from "./components/ProductDetails";
+
 function App() {
-  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Created by <code>Mohamed Adel Mohamed Ismail</code> for ITI.
-        </p>
-        <h1>Counter: {count}</h1>
-        <div className="btns">
-          <CustomBtn
-            text={"Increase Count"}
-            onClick={() => setCount(count + 1)}
-          />
-          <CustomBtn
-            text={"Decrease Count"}
-            onClick={() => count && setCount(count - 1)}
-          />
-        </div>
-      </header>
-    </div>
+    <Router>
+      <CustomNavbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/counter" component={Counter} />
+        <Route path="/shop" component={Products} />
+        <Route path="/product/details/:id" component={ProductDetails} />
+      </Switch>
+    </Router>
   );
 }
 
