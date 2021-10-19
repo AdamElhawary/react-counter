@@ -12,6 +12,7 @@ function App() {
       <CustomNavbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/react-iti-portfolio" component={Home} />
         <Route path="/counter" component={Counter} />
         <Route path="/shop" component={Products} />
         <Route path="/product/details/:id" component={ProductDetails} />
