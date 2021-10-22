@@ -42,6 +42,11 @@ const CustomNavbar = (props) => {
                 Shop
               </Link>
             </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/todo">
+                Todo
+              </Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
