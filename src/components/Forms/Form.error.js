@@ -5,7 +5,7 @@ const FormError = ({ name }) => {
   return (
     <ErrorMessage name={name}>
       {(errMsg) => {
-        return <div style={{ color: "red" }}>{errMsg}</div>;
+        return <div style={{ color: "#8b0000" }}>{errMsg}</div>;
       }}
     </ErrorMessage>
   );

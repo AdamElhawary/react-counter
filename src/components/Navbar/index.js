@@ -28,8 +28,13 @@ const CustomNavbar = (props) => {
               </Link>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/login">
                 Log In
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/register">
+                Register
               </Link>
             </NavItem>
             <NavItem>

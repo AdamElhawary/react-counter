@@ -6,6 +6,8 @@ import Counter from "./components/counter";
 import Products from "./components/products";
 import ProductDetails from "./components/ProductDetails";
 import Todo from "./components/todo";
+import Login from "./components/Forms/Login";
+import Registeration from "./components/Forms/Register";
 const App = () => {
   return (
     <Router>
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/shop" component={Products} />
         <Route path="/product/details/:id" component={ProductDetails} />
         <Route path="/todo" component={Todo} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Registeration} />
       </Switch>
     </Router>
   );
